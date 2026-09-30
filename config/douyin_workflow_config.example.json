@@ -1,0 +1,70 @@
+{
+  "mode": "manual",
+  "date_mode": "today",
+  "timezone": "Asia/Shanghai",
+  "target_date": null,
+  "start_date": null,
+  "end_date": null,
+  "scheduled_time": null,
+  "retry_delay_hours": 1,
+  "failure_action": "stop_and_record",
+  "failure_email": "",
+  "smtp": {
+    "enabled": false,
+    "host": "",
+    "port": 587,
+    "username": "",
+    "password": "",
+    "from": "",
+    "ssl": false
+  },
+  "obsidian_output_path": "",
+  "prompt_file": "",
+  "chrome_debug_port": 9222,
+  "chrome_profile_dir": ".chrome-automation",
+  "chrome_start_url": "",
+  "chrome_path": "",
+  "chromedriver_path": "",
+  "luopan_entry_url": "",
+  "luopan_bookmark_label": "",
+  "resume_from_current_page": false,
+  "headless": false,
+  "page_load_timeout_seconds": 30,
+  "implicit_wait_seconds": 2,
+  "navigation_steps": [
+    {
+      "action": "click",
+      "label": "直播",
+      "text": "直播"
+    },
+    {
+      "action": "click",
+      "label": "直播概览及列表",
+      "text": "直播概览及列表"
+    },
+    {
+      "action": "click",
+      "label": "直播间列表",
+      "text": "直播间列表"
+    },
+    {
+      "action": "select_option",
+      "label": "账号筛选",
+      "trigger_text": "全部账号",
+      "option_text": "自营账号"
+    },
+    {
+      "action": "select_option",
+      "label": "时间范围",
+      "trigger_text": "近7天",
+      "option_text": "近7天"
+    }
+  ],
+  "rules": {
+    "date_judgement": "按开播时间判断；跨天直播归入开播日期",
+    "multi_sessions_same_day": "同一天多场直播写入同一篇笔记",
+    "range_output": "日期范围内按天各生成一篇 YYYY.M.D直播数据",
+    "live_not_finished": "到执行时间若直播未结束则延后 1 小时重试",
+    "cross_day_priority": "跨天直播只归入开播日期；同一天多场时按列表原有顺序处理"
+  }
+}

@@ -1,0 +1,19 @@
+# Local configuration and credentials
+config/douyin_workflow_config.json
+config/smtp_password_history.json
+.chrome-automation/
+.chrome-automation-headless/
+
+# Generated data and backups
+output/
+*.log
+
+# Python and local environments
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+runtime/
+vendor/
+drivers/
+dist/
